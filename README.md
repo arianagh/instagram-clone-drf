@@ -1,6 +1,6 @@
 # instagram-clone-drf
 # features:
-registering and logging to user account
+registering and logging to user account/
 posting photos
 commenting and liking posts
 complete following system
