@@ -49,7 +49,7 @@ class UserDetailAPIUpdate(RetrieveUpdateAPIView):
     """
     edit user profile
     """
-    authentication_classes = (TokenAuthentication,)
+    # authentication_classes = (TokenAuthentication,)
     permission_classes = [permissions.IsAuthenticated]
 
     queryset = Profile.objects.all()
@@ -64,7 +64,7 @@ class Instagram(viewsets.ViewSet):
     viewset to deal with everything about
     followers and followings functionality
     """
-    authentication_classes = (TokenAuthentication,)
+    # authentication_classes = (TokenAuthentication,)
     permission_classes = [permissions.IsAuthenticated]
 
     def list(self, request):

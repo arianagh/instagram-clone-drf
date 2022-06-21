@@ -8,6 +8,14 @@ DEBUG = True
 
 ALLOWED_HOSTS = []
 
+REST_FRAMEWORK = {
+
+    'DEFAULT_AUTHENTICATION_CLASSES': (
+        'rest_framework_simplejwt.authentication.JWTAuthentication',
+    )
+
+}
+
 INSTALLED_APPS = [
     'django.contrib.admin',
     'django.contrib.auth',
@@ -19,6 +27,8 @@ INSTALLED_APPS = [
     'posts',
     "rest_framework",
     "rest_framework.authtoken",
+    'rest_framework_simplejwt',
+
 ]
 
 MIDDLEWARE = [

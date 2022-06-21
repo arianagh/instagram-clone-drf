@@ -17,7 +17,7 @@ class PostsListView(viewsets.ViewSet):
     """
     way 1 is with viewsets
     """
-    authentication_classes = [authentication.TokenAuthentication]
+    # authentication_classes = [authentication.TokenAuthentication]
     permission_classes = [permissions.IsAuthenticated]
 
     @action(methods=['GET'], detail=True, url_name='get-posts', url_path='get-posts')
@@ -68,7 +68,7 @@ class PostsListView(viewsets.ViewSet):
 
 class AddCommentView(APIView):
 
-    authentication_classes = [authentication.TokenAuthentication]
+    # authentication_classes = [authentication.TokenAuthentication]
     permission_classes = [permissions.IsAuthenticated]
 
     def post(self, request, post_id=None, user_id=None):
@@ -92,7 +92,7 @@ class ManageCommentView(RetrieveUpdateDestroyAPIView):
     serializer_class = CommentSerializer
     lookup_url_kwarg = 'comment_id'
     permission_classes = (IsOwnerOrPostOwnerOrReadOnly,)
-    authentication_classes = [authentication.TokenAuthentication]
+    # authentication_classes = [authentication.TokenAuthentication]
 
     def get_queryset(self):
         queryset = Comment.objects.all()
@@ -104,7 +104,7 @@ class ShowPostLikesComments(ListAPIView):
     view to get all likes and comments and posts for each owner posts
     """
     serializer_class = ShowLikesCommentsSerializer
-    authentication_classes = [authentication.TokenAuthentication]
+    # authentication_classes = [authentication.TokenAuthentication]
     permission_classes = [permissions.IsAuthenticated]
 
     def get_queryset(self):
@@ -114,7 +114,7 @@ class ShowPostLikesComments(ListAPIView):
 
 class LikeCreateView(APIView):
     """ toggle like """
-    authentication_classes = [authentication.TokenAuthentication]
+    # authentication_classes = [authentication.TokenAuthentication]
     permission_classes = [permissions.IsAuthenticated]
 
     def get(self, request, post_id=None):
@@ -134,7 +134,7 @@ class LikeCreateView(APIView):
 
 class GetLikersView(ListAPIView):
     """ view to get all likes for each post """
-    authentication_classes = [authentication.TokenAuthentication]
+    # authentication_classes = [authentication.TokenAuthentication]
     permission_classes = [permissions.IsAuthenticated]
     serializer_class = AuthorSerializer
 
