@@ -4,6 +4,7 @@ RESTFRAMEWORK instagram-clone with all basic features.
 
 ## Features:
 
+-   authentication with jwt
 -   registering and logging to user account
 -   posting photos
 -   commenting and liking posts
