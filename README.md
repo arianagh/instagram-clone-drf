@@ -1,6 +1,6 @@
 # instagram-clone-drf
 
-RESTFRAMEWORK instagram-clone with all basic features.
+Instagram-clone django backend with all basic features.
 
 ## Features:
 
